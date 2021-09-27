@@ -55,3 +55,15 @@ tcp              LISTEN             0                  128                      
 ### Other setting
 1. Upgraded the ram to 4GB and cpu to 4 vcpu
 2. port forwarding 80 to 8080
+
+### Working with API 
+Before working with API, you need to install some tools.
+```
+Install ansible-tower-cli using pip3.
+python -m pip install ansible-tower-cli
+```
+
+Install perl-JSON-PP and jq packages.
+```
+sudo dnf install -y perl-JSON-PP jq
+```
