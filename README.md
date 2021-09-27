@@ -67,3 +67,34 @@ Install perl-JSON-PP and jq packages.
 ```
 sudo dnf install -y perl-JSON-PP jq
 ```
+
+### API
+
+Powershell
+```
+$headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
+$headers.Add("Authorization", "Basic YWRtaW46cGFzc3dvcmQ=")
+
+$response = Invoke-RestMethod 'http://localhost:8080/api/v2/job_templates/10/launch/' -Method 'POST' -Headers $headers
+$response | ConvertTo-Json
+```
+
+Python
+
+*please change the id*
+
+```
+import requests
+
+url = "http://localhost:8080/api/v2/job_templates/10/launch/"
+
+payload={}
+headers = {
+  'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ='
+}
+
+response = requests.request("POST", url, headers=headers, data=payload)
+
+print(response.text)
+
+```
