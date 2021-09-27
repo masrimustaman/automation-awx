@@ -70,6 +70,8 @@ sudo dnf install -y perl-JSON-PP jq
 
 ### API
 
+*please change the id*
+
 Powershell
 ```
 $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
@@ -81,7 +83,7 @@ $response | ConvertTo-Json
 
 Python
 
-*please change the id*
+
 
 ```
 import requests
